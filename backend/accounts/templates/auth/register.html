@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class="container py-5">
+	<h1>Register</h1>
+
+	<form method="post">
+		{% csrf_token %}
+		email:<br>
+		<input type="text" name="email" placeholder="Email"><br>
+		Password:<br>
+		name:<br>
+		<input type="text" name="name" placeholder="name"><br>
+		<input type="password" name="password1" placeholder="Password"><br>
+		Password Confirmation:<br>
+		<input type="password" name="password2" placeholder="Confirm Password"><br><br>
+		<input type="submit" value="Submit">
+	</form>             
+
+	<p class="text-center">If you already have an account, <a href="/login">login</a> instead.</p>
+</div>
+
+
+{% endblock %}
